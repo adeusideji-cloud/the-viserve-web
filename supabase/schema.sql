@@ -133,3 +133,84 @@ alter table public.deadlines enable row level security;
 
 create policy "Users can manage own deadlines"
   on deadlines for all using (auth.uid() = user_id);
+
+-- =============================================
+-- ADMIN TABLES
+-- =============================================
+
+-- Admin users table (separate from regular clients)
+create table if not exists public.admin_users (
+  id uuid primary key default uuid_generate_v4(),
+  auth_user_id uuid references auth.users on delete cascade unique,
+  email text unique not null,
+  full_name text not null,
+  role text not null default 'admin' check (role in ('superadmin','admin','viewer')),
+  is_active boolean default true,
+  last_login timestamptz,
+  created_at timestamptz default now(),
+  created_by uuid references public.admin_users(id)
+);
+
+alter table public.admin_users enable row level security;
+
+create policy "Admins can view admin_users"
+  on admin_users for select
+  using (auth.uid() in (select auth_user_id from admin_users where is_active = true));
+
+create policy "Superadmins manage admin_users"
+  on admin_users for all
+  using (auth.uid() in (select auth_user_id from admin_users where role = 'superadmin' and is_active = true));
+
+-- Admin activity log
+create table if not exists public.admin_activity_log (
+  id uuid primary key default uuid_generate_v4(),
+  admin_id uuid references public.admin_users(id),
+  action text not null,
+  target_type text,
+  target_id text,
+  details jsonb,
+  created_at timestamptz default now()
+);
+
+alter table public.admin_activity_log enable row level security;
+
+create policy "Admins view activity log"
+  on admin_activity_log for select
+  using (auth.uid() in (select auth_user_id from admin_users where is_active = true));
+
+create policy "Admins insert activity log"
+  on admin_activity_log for insert
+  with check (auth.uid() in (select auth_user_id from admin_users where is_active = true));
+
+-- Add admin columns to profiles
+alter table public.profiles add column if not exists status text default 'active';
+alter table public.profiles add column if not exists admin_notes text;
+alter table public.profiles add column if not exists assigned_admin uuid references public.admin_users(id);
+
+-- Admin access to profiles
+create policy "Admins view all profiles"
+  on profiles for select
+  using (auth.uid() in (select auth_user_id from admin_users where is_active = true));
+
+create policy "Admins update all profiles"
+  on profiles for update
+  using (auth.uid() in (select auth_user_id from admin_users where is_active = true));
+
+-- Admin access to cases
+create policy "Admins view all cases"
+  on cases for select
+  using (auth.uid() in (select auth_user_id from admin_users where is_active = true));
+
+create policy "Admins update all cases"
+  on cases for update
+  using (auth.uid() in (select auth_user_id from admin_users where is_active = true));
+
+-- Admin access to contact submissions
+create policy "Admins manage contacts"
+  on contact_submissions for all
+  using (auth.uid() in (select auth_user_id from admin_users where is_active = true));
+
+-- Admin access to documents
+create policy "Admins view all documents"
+  on documents for select
+  using (auth.uid() in (select auth_user_id from admin_users where is_active = true));
