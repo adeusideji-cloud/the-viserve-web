@@ -36,7 +36,7 @@ export default function Navbar() {
               <Globe className="w-5 h-5 text-white" />
             </div>
             <div>
-              <span className="text-xl font-bold" style={{ color: "#0057A8" }}>ViServe</span>
+              <span className="text-xl font-bold" style={{ color: "#0057A8" }}>The ViServe</span>
               <span className="text-xs block leading-none text-gray-500 -mt-0.5">Immigration Services</span>
             </div>
           </Link>

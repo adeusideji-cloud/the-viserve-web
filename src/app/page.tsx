@@ -54,7 +54,7 @@ export default function HomePage() {
               Immigration Made <span className="text-yellow-300">Simple</span> &amp; Affordable
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
-              ViServe guides you through every step of the immigration process — from visa applications to citizenship — with expert support and attorney-reviewed tools.
+              The ViServe guides you through every step of the immigration process — from visa applications to citizenship — with expert support and attorney-reviewed tools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/get-started" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl text-blue-900 bg-yellow-400 hover:bg-yellow-300 transition-colors shadow-lg">
@@ -218,7 +218,7 @@ export default function HomePage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Ready to Start Your Journey?</h2>
-          <p className="text-gray-600 text-lg mb-8">Join thousands of families who trusted ViServe to navigate their immigration process successfully.</p>
+          <p className="text-gray-600 text-lg mb-8">Join thousands of families who trusted The ViServe to navigate their immigration process successfully.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/get-started" className="px-8 py-4 font-semibold text-white rounded-xl transition-colors shadow-lg text-base" style={{ background: "#0057A8" }}>
               Get Started — It&apos;s Free
@@ -227,7 +227,7 @@ export default function HomePage() {
               Talk to an Expert
             </Link>
           </div>
-          <p className="text-xs text-gray-400 mt-4">ViServe is not a law firm. Services are for self-help document preparation only.</p>
+          <p className="text-xs text-gray-400 mt-4">The The ViServe is not a law firm. Services are for self-help document preparation only.</p>
         </div>
       </section>
     </>

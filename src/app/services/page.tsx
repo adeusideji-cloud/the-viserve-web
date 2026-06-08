@@ -129,7 +129,7 @@ export default function ServicesPage() {
       <section className="py-12 bg-yellow-50 border-y border-yellow-200">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-sm text-yellow-800">
-            <strong>Disclaimer:</strong> ViServe Inc. is not a law firm. Our services are limited to self-help document preparation. We do not provide legal advice. For complex immigration matters, we recommend consulting a licensed immigration attorney.
+            <strong>Disclaimer:</strong> The The The ViServe is not a law firm. Our services are limited to self-help document preparation. We do not provide legal advice. For complex immigration matters, we recommend consulting a licensed immigration attorney.
           </p>
         </div>
       </section>

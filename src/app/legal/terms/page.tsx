@@ -6,15 +6,15 @@ export default function TermsPage() {
       <div className="prose prose-gray max-w-none space-y-8 text-sm text-gray-700 leading-relaxed">
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">1. Acceptance of Terms</h2>
-          <p>By accessing or using ViServe Inc. (&quot;ViServe,&quot; &quot;we,&quot; &quot;our&quot;) services, you agree to be bound by these Terms of Use. If you do not agree, please do not use our services.</p>
+          <p>By accessing or using The ViServe (&quot;ViServe,&quot; &quot;we,&quot; &quot;our&quot;) services, you agree to be bound by these Terms of Use. If you do not agree, please do not use our services.</p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">2. Not a Law Firm — No Attorney-Client Relationship</h2>
-          <p>ViServe Inc. is NOT a law firm and does NOT provide legal advice. We are a self-help document preparation service. Use of our services does not create an attorney-client relationship. For legal advice, consult a licensed immigration attorney.</p>
+          <p>The The The ViServe is not a law firm and does NOT provide legal advice. We are a self-help document preparation service. Use of our services does not create an attorney-client relationship. For legal advice, consult a licensed immigration attorney.</p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">3. Description of Services</h2>
-          <p>ViServe provides self-help immigration document preparation services, immigration tools, resources, and educational content. We help users prepare immigration forms based on information provided by the user. We do not verify the accuracy of information you provide.</p>
+          <p>The ViServe provides self-help immigration document preparation services, immigration tools, resources, and educational content. We help users prepare immigration forms based on information provided by the user. We do not verify the accuracy of information you provide.</p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">4. User Responsibilities</h2>

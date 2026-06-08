@@ -4,16 +4,16 @@ export default function DisclaimerPage() {
       <h1 className="text-3xl font-bold mb-2" style={{ color: "#1a1a2e" }}>Legal Disclaimer</h1>
       <p className="text-sm text-gray-400 mb-10">Last updated: June 3, 2026</p>
       <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6 mb-8">
-        <p className="text-yellow-800 font-semibold">ViServe Inc. is NOT a law firm and does NOT provide legal advice.</p>
+        <p className="text-yellow-800 font-semibold">The The The ViServe is not a law firm and does NOT provide legal advice.</p>
       </div>
       <div className="space-y-8 text-sm text-gray-700 leading-relaxed">
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">Not a Law Firm</h2>
-          <p>ViServe Inc. is a technology company that provides self-help immigration document preparation services. We are not attorneys and cannot provide legal advice. Nothing on this website constitutes legal advice.</p>
+          <p>The ViServe is a technology company that provides self-help immigration document preparation services. We are not attorneys and cannot provide legal advice. Nothing on this website constitutes legal advice.</p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">No Attorney-Client Relationship</h2>
-          <p>Your use of ViServe services does not create an attorney-client relationship between you and ViServe Inc. or any of its employees, contractors, or affiliates.</p>
+          <p>Your use of ViServe services does not create an attorney-client relationship between you and The ViServe or any of its employees, contractors, or affiliates.</p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">Limitation of Services</h2>

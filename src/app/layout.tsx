@@ -4,11 +4,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "ViServe Inc. | Global Immigration & Visa Services",
-  description: "ViServe Inc. provides expert immigration guidance, visa processing support, and document preparation services for individuals and families worldwide.",
+  title: "The ViServe | Global Immigration & Visa Services",
+  description: "The The ViServe provides expert immigration guidance, visa processing support, and document preparation services for individuals and families worldwide.",
   keywords: "immigration, visa, green card, citizenship, work permit, ViServe",
   openGraph: {
-    title: "ViServe Inc. | Global Immigration & Visa Services",
+    title: "The ViServe | Global Immigration & Visa Services",
     description: "Expert immigration support for individuals and families worldwide.",
     type: "website",
   },

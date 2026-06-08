@@ -63,7 +63,7 @@ const plans = [
 ];
 
 const faqs = [
-  { q: "Is ViServe a law firm?", a: "No. ViServe Inc. is not a law firm and does not provide legal advice. We provide self-help immigration document preparation services only." },
+  { q: "Is ViServe a law firm?", a: "No. The The The ViServe is not a law firm and does not provide legal advice. We provide self-help immigration document preparation services only." },
   { q: "What is your refund policy?", a: "If USCIS denies your application and it is due to an error in our preparation, we will refund our service fee in full. See our Refund Policy for full details." },
   { q: "Can I upgrade my plan?", a: "Yes, you can upgrade your plan at any time from within your client dashboard and only pay the difference." },
   { q: "Are government (USCIS) filing fees included?", a: "No. Our fees cover document preparation only. USCIS filing fees are separate and paid directly to USCIS." },

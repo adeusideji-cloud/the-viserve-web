@@ -23,7 +23,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="hero-gradient text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About ViServe Inc.</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About The ViServe</h1>
           <p className="text-lg text-blue-100 max-w-2xl mx-auto">
             We are a global immigration technology company on a mission to make the immigration process accessible, affordable, and stress-free for everyone.
           </p>
@@ -37,7 +37,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6" style={{ color: "#1a1a2e" }}>Our Story</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                ViServe Inc. was founded with one clear purpose: to eliminate the confusion, fear, and financial burden that too many immigrants face when navigating the immigration system.
+                The The ViServe was founded with one clear purpose: to eliminate the confusion, fear, and financial burden that too many immigrants face when navigating the immigration system.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Our founder experienced firsthand how overwhelming immigration paperwork can be — and how expensive professional legal help is. ViServe bridges this gap by providing attorney-reviewed, step-by-step guidance at a fraction of the cost.
@@ -141,7 +141,7 @@ export default function AboutPage() {
       <section className="py-12 bg-yellow-50 border-y border-yellow-200">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-sm text-yellow-800 leading-relaxed">
-            <strong>Important Notice:</strong> ViServe Inc. is NOT a law firm and does not provide legal advice. We provide self-help immigration document preparation services only. For legal advice, please consult a licensed immigration attorney.
+            <strong>Important Notice:</strong> The The The ViServe is not a law firm and does not provide legal advice. We provide self-help immigration document preparation services only. For legal advice, please consult a licensed immigration attorney.
           </p>
         </div>
       </section>

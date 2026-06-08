@@ -12,7 +12,7 @@ export default function Footer() {
               <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #0057A8, #00A86B)" }}>
                 <Globe className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">ViServe Inc.</span>
+              <span className="text-xl font-bold text-white">The ViServe</span>
             </Link>
             <p className="text-sm text-gray-400 mb-5 max-w-xs leading-relaxed">
               Empowering immigrants worldwide with affordable, accurate, and accessible immigration support services.
@@ -69,9 +69,9 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} ViServe Inc. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} The ViServe All rights reserved.</p>
           <p className="text-center text-xs">
-            ⚠️ ViServe Inc. is NOT a law firm. We provide self-help document preparation services only. We are not attorneys and do not provide legal advice.
+            ⚠️ The The The ViServe is not a law firm. We provide self-help document preparation services only. We are not attorneys and do not provide legal advice.
           </p>
         </div>
       </div>

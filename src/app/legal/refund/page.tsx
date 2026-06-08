@@ -6,7 +6,7 @@ export default function RefundPage() {
       <div className="space-y-8 text-sm text-gray-700 leading-relaxed">
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">Our Guarantee</h2>
-          <p>ViServe stands behind the quality of our document preparation services. If your application is denied by USCIS due to an error in our preparation, we will refund our service fee in full.</p>
+          <p>The ViServe stands behind the quality of our document preparation services. If your application is denied by USCIS due to an error in our preparation, we will refund our service fee in full.</p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">Eligibility for Refund</h2>

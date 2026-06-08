@@ -54,7 +54,7 @@ export default function SignupPage() {
             <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #0057A8, #00A86B)" }}>
               <Globe className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold" style={{ color: "#0057A8" }}>ViServe Inc.</span>
+            <span className="text-xl font-bold" style={{ color: "#0057A8" }}>The ViServe</span>
           </Link>
           <h1 className="text-2xl font-bold text-gray-900">Create Your Account</h1>
           <p className="text-gray-500 text-sm mt-1">Start your immigration journey today — it&apos;s free</p>

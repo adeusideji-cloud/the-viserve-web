@@ -140,7 +140,7 @@ export default function ContactPage() {
           <div className="space-y-4">
             {[
               { q: "How quickly will I receive a response?", a: "We respond to all inquiries within 1 business day. Priority support calls are answered during business hours." },
-              { q: "Do you provide legal advice?", a: "No. ViServe is not a law firm. We provide document preparation assistance only. For legal advice, we can refer you to a licensed immigration attorney." },
+              { q: "Do you provide legal advice?", a: "No. The The ViServe is not a law firm. We provide document preparation assistance only. For legal advice, we can refer you to a licensed immigration attorney." },
               { q: "Can I get support in my language?", a: "Yes! We offer support in English, Spanish, French, Portuguese, Mandarin, Hindi, and more. Contact us to request your preferred language." },
               { q: "Is my information secure?", a: "Yes. We use industry-standard encryption and security practices to protect all client data. See our Privacy Policy for full details." },
             ].map(({ q, a }) => (
