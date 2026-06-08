@@ -32,8 +32,7 @@ export default function AdminUsersPage() {
 
   async function toggleAdmin(id: string, currentActive: boolean) {
     const supabase = createClient();
-    await supabase.from("admin_users").update({ is_active: !currentActive }).eq("id", id);
-    setAdmins(prev => prev.map(a => a.id === id ? { ...a, is_active: !currentActive } : a));
+        setAdmins(prev => prev.map(a => a.id === id ? { ...a, is_active: !currentActive } : a));
   }
 
   if (loading || !adminUser) return <div className="min-h-screen bg-gray-950 flex items-center justify-center"><div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" /></div>;

@@ -4,20 +4,21 @@ import { usePathname, useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import {
   LayoutDashboard, Users, FileText, MessageSquare, UserCog,
-  LogOut, Shield, Bell, Activity, ChevronRight
+  LogOut, Shield, Bell, Activity, ChevronRight, User, Key
 } from "lucide-react";
 
 const navItems = [
-  { icon: LayoutDashboard, label: "Dashboard", href: "/admin" },
-  { icon: Users, label: "Clients", href: "/admin/clients" },
-  { icon: FileText, label: "Cases", href: "/admin/cases" },
-  { icon: MessageSquare, label: "Contact Submissions", href: "/admin/contacts" },
-  { icon: UserCog, label: "Admin Users", href: "/admin/admins" },
-  { icon: Activity, label: "Activity Log", href: "/admin/activity" },
+  { icon: LayoutDashboard, label: "Dashboard", href: "/admin", superadminOnly: false },
+  { icon: Users, label: "Clients", href: "/admin/clients", superadminOnly: false },
+  { icon: FileText, label: "Cases", href: "/admin/cases", superadminOnly: false },
+  { icon: MessageSquare, label: "Contacts", href: "/admin/contacts", superadminOnly: false },
+  { icon: UserCog, label: "Admin Users", href: "/admin/admins", superadminOnly: true },
+  { icon: Activity, label: "Activity Log", href: "/admin/activity", superadminOnly: true },
 ];
 
 export default function AdminSidebar({ adminName, adminRole }: { adminName: string; adminRole: string }) {
   const pathname = usePathname();
+  const isSuperAdmin = adminRole === "superadmin";
   const router = useRouter();
 
   async function handleLogout() {
@@ -59,7 +60,7 @@ export default function AdminSidebar({ adminName, adminRole }: { adminName: stri
 
       {/* Navigation */}
       <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
-        {navItems.map(({ icon: Icon, label, href }) => {
+        {navItems.filter(item => !item.superadminOnly || isSuperAdmin).map(({ icon: Icon, label, href }) => {
           const active = pathname === href || (href !== "/admin" && pathname.startsWith(href));
           return (
             <Link key={href} href={href}
@@ -73,6 +74,23 @@ export default function AdminSidebar({ adminName, adminRole }: { adminName: stri
             </Link>
           );
         })}
+
+        <div className="pt-2 mt-2 border-t border-gray-800">
+          <Link href="/admin/profile"
+            className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors group ${
+              pathname === "/admin/profile" ? "bg-blue-600 text-white" : "text-gray-400 hover:text-white hover:bg-gray-800"
+            }`}
+          >
+            <User className="w-4 h-4 flex-shrink-0 text-gray-500 group-hover:text-white" />
+            My Profile
+          </Link>
+          <Link href="/admin/profile"
+            className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 transition-colors group"
+          >
+            <Key className="w-4 h-4 flex-shrink-0 text-gray-500 group-hover:text-white" />
+            Change Password
+          </Link>
+        </div>
       </nav>
 
       {/* Logout */}
