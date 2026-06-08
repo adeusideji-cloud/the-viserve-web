@@ -1,15 +1,40 @@
-import { createClient } from "@/lib/supabase/server";
-import { redirect } from "next/navigation";
+"use client";
+import { useEffect, useState } from "react";
+import { createClient } from "@/lib/supabase/client";
+import { useRouter } from "next/navigation";
 import { FileText, Clock, CheckCircle, AlertCircle, Upload, Bell, User, LogOut } from "lucide-react";
 import Link from "next/link";
 
-export default async function DashboardPage() {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+export default function DashboardPage() {
+  const router = useRouter();
+  const [user, setUser] = useState<{ email?: string; user_metadata?: Record<string, string> } | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  if (!user) redirect("/login");
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (!user) { router.push("/login"); return; }
+      setUser(user);
+      setLoading(false);
+    });
+  }, [router]);
 
-  const userName = user.user_metadata?.full_name || user.email?.split("@")[0] || "Client";
+  async function handleLogout() {
+    const supabase = createClient();
+    await supabase.auth.signOut();
+    router.push("/login");
+  }
+
+  if (loading) return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+        <p className="text-gray-500 text-sm">Loading your dashboard...</p>
+      </div>
+    </div>
+  );
+
+  const userName = user?.user_metadata?.full_name || user?.email?.split("@")[0] || "Client";
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,11 +53,9 @@ export default async function DashboardPage() {
             <Link href="/dashboard/profile" className="p-2 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100">
               <User className="w-5 h-5" />
             </Link>
-            <form action="/api/auth/logout" method="POST">
-              <button type="submit" className="p-2 rounded-lg text-gray-400 hover:text-red-600 hover:bg-red-50">
-                <LogOut className="w-5 h-5" />
-              </button>
-            </form>
+            <button onClick={handleLogout} className="p-2 rounded-lg text-gray-400 hover:text-red-600 hover:bg-red-50">
+              <LogOut className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>
@@ -73,8 +96,6 @@ export default async function DashboardPage() {
                   </div>
                 </div>
               </div>
-
-              {/* Progress */}
               <h3 className="font-semibold text-sm text-gray-700 mb-3">Case Progress</h3>
               <div className="space-y-3">
                 {[
@@ -101,7 +122,6 @@ export default async function DashboardPage() {
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="font-bold text-gray-900">Document Checklist</h2>
-                <Link href="/dashboard/documents" className="text-sm text-blue-600 font-medium hover:underline">View all</Link>
               </div>
               <div className="space-y-3">
                 {[
@@ -122,15 +142,11 @@ export default async function DashboardPage() {
                   </div>
                 ))}
               </div>
-              <button className="mt-4 w-full flex items-center justify-center gap-2 py-3 border-2 border-dashed border-gray-200 rounded-xl text-sm text-gray-500 hover:border-blue-400 hover:text-blue-600 transition-colors">
-                <Upload className="w-4 h-4" /> Upload Document
-              </button>
             </div>
           </div>
 
           {/* Sidebar */}
           <div className="space-y-5">
-            {/* Deadlines */}
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
               <h2 className="font-bold text-gray-900 mb-4">Upcoming Deadlines</h2>
               <div className="space-y-3">
@@ -149,25 +165,22 @@ export default async function DashboardPage() {
               </div>
             </div>
 
-            {/* Quick Actions */}
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
               <h2 className="font-bold text-gray-900 mb-4">Quick Actions</h2>
               <div className="space-y-2">
                 {[
-                  { label: "View My Forms", href: "/dashboard/forms" },
-                  { label: "Contact Support", href: "/contact" },
                   { label: "Immigration Tools", href: "/tools" },
+                  { label: "Contact Support", href: "/contact" },
                   { label: "Resources & Guides", href: "/resources" },
+                  { label: "Pricing & Plans", href: "/pricing" },
                 ].map(({ label, href }) => (
                   <Link key={label} href={href} className="flex items-center justify-between px-4 py-3 rounded-xl text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors border border-gray-100">
-                    {label}
-                    <span>→</span>
+                    {label} <span>→</span>
                   </Link>
                 ))}
               </div>
             </div>
 
-            {/* Support */}
             <div className="rounded-2xl p-6 text-white" style={{ background: "linear-gradient(135deg, #0057A8, #00A86B)" }}>
               <h3 className="font-bold mb-2">Need Help?</h3>
               <p className="text-sm text-blue-100 mb-4">Our support team is available Mon–Fri, 9AM–6PM EST.</p>
