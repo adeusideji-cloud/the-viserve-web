@@ -9,7 +9,6 @@ const services = [
     subtitle: "Form I-485 & I-130",
     description: "Whether you're applying from inside the U.S. or helping a relative from abroad, our guided process ensures your green card application is accurate and complete.",
     features: ["Form I-485 (Adjustment of Status)", "Form I-130 (Petition for Alien Relative)", "Document checklist generation", "Biometrics appointment guidance", "Interview preparation tips"],
-    price: "Free",
   },
   {
     id: "citizenship",
@@ -18,7 +17,6 @@ const services = [
     subtitle: "Naturalization Application",
     description: "Become a U.S. citizen with confidence. Our step-by-step naturalization service ensures your Form N-400 is properly prepared and filed.",
     features: ["Form N-400 preparation", "Eligibility verification", "Civics test study guide", "Interview prep materials", "Filing instructions"],
-    price: "Free",
   },
   {
     id: "family",
@@ -27,7 +25,6 @@ const services = [
     subtitle: "Bring Your Family to the U.S.",
     description: "Reunite with your loved ones. We help with petitions for spouses, children, parents, and siblings to obtain permanent resident status.",
     features: ["Spousal visas (IR-1, CR-1)", "K-1 Fiancé visa (I-129F)", "Parent & sibling petitions", "Child immigration support", "Conditional green card removal"],
-    price: "Free",
   },
   {
     id: "work-visa",
@@ -36,7 +33,6 @@ const services = [
     subtitle: "H-1B, L-1, O-1 & More",
     description: "Support for professionals, executives, and extraordinary ability individuals seeking to live and work in the United States.",
     features: ["H-1B specialty occupation", "L-1 intracompany transfer", "O-1 extraordinary ability", "EB-1, EB-2, EB-3 categories", "Labor certification (PERM)"],
-    price: "Free",
   },
   {
     id: "student",
@@ -45,7 +41,6 @@ const services = [
     subtitle: "F-1, J-1, M-1 Support",
     description: "Pursue your education in the U.S. with proper visa documentation. We help students and exchange visitors prepare accurate visa applications.",
     features: ["F-1 student visa prep", "J-1 exchange visitor support", "SEVIS guidance", "OPT/CPT authorization", "Status change assistance"],
-    price: "Free",
   },
   {
     id: "rfe",
@@ -54,7 +49,6 @@ const services = [
     subtitle: "Request for Evidence",
     description: "Received an RFE? Don't panic. Our experts help you organize a strong, complete response to keep your application moving forward.",
     features: ["RFE analysis & strategy", "Document organization", "Evidence compilation guide", "Response letter templates", "Attorney referral if needed"],
-    price: "Free",
   },
   {
     id: "referrals",
@@ -63,7 +57,6 @@ const services = [
     subtitle: "When You Need Legal Counsel",
     description: "For complex cases, we connect you with licensed immigration attorneys in our vetted network who provide legal advice at competitive rates.",
     features: ["Free case assessment", "Vetted attorney network", "Competitive fee structures", "Ongoing case support", "Multiple languages available"],
-    price: "Free referral",
   },
   {
     id: "document",
@@ -72,7 +65,6 @@ const services = [
     subtitle: "Complete Document Packages",
     description: "From cover letters to affidavits, we generate all supporting documents your immigration case requires, customized to your specific answers.",
     features: ["Custom cover letters", "Affidavit of support (I-864)", "Personal statements", "Document translation guidance", "Organizational checklists"],
-    price: "Free",
   },
 ];
 
@@ -99,12 +91,9 @@ export default function ServicesPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-4xl">{service.emoji}</div>
                   <div className="flex-1">
-                    <div className="flex items-start justify-between gap-4 mb-2">
-                      <div>
-                        <h2 className="text-xl font-bold text-gray-900">{service.title}</h2>
-                        <p className="text-sm font-medium" style={{ color: "#0057A8" }}>{service.subtitle}</p>
-                      </div>
-                      <span className="text-sm font-bold text-green-700 bg-green-50 px-3 py-1 rounded-full whitespace-nowrap">{service.price}</span>
+                    <div className="mb-2">
+                      <h2 className="text-xl font-bold text-gray-900">{service.title}</h2>
+                      <p className="text-sm font-medium" style={{ color: "#0057A8" }}>{service.subtitle}</p>
                     </div>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">{service.description}</p>
                     <ul className="space-y-1.5 mb-5">
@@ -115,8 +104,8 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
-                    <Link href={`/pricing`} className="inline-flex items-center gap-1 text-sm font-semibold" style={{ color: "#0057A8" }}>
-                      Learn More <ArrowRight className="w-4 h-4" />
+                    <Link href={`/contact`} className="inline-flex items-center gap-1 text-sm font-semibold" style={{ color: "#0057A8" }}>
+                      Get Started <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
