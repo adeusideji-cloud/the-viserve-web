@@ -227,7 +227,6 @@ export default function HomePage() {
               Talk to an Expert
             </Link>
           </div>
-          <p className="text-xs text-gray-400 mt-4">The The ViServe is not a law firm. Services are for self-help document preparation only.</p>
         </div>
       </section>
     </>
