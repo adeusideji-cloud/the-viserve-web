@@ -42,10 +42,7 @@ export default function AboutPage() {
                 The ViServe was founded with one clear purpose: to eliminate the confusion, fear, and financial burden that too many immigrants face when navigating the immigration system.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Our founder, Ayo Adeusi, experienced firsthand how overwhelming immigration paperwork can be — and how expensive professional legal help is. The ViServe bridges this gap by providing attorney-reviewed, step-by-step guidance at a fraction of the cost, empowering individuals and families to navigate the process with independence and confidence.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Based in Plano, Texas, we serve clients in over 150 countries, helping families reunite, professionals advance their careers, and students pursue their dreams in the United States and beyond.
+                We serve clients in over 150 countries, helping families reunite, professionals advance their careers, and students pursue their dreams in the United States and beyond.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
                 The ViServe is committed to combining expert human guidance with cutting-edge technology — making immigration accessible to everyone, everywhere.
@@ -116,31 +113,6 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Founder */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Founder &amp; Leadership</h2>
-            <p className="text-gray-600">Built by people who understand the immigration journey firsthand.</p>
-          </div>
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-8">
-            <div className="w-28 h-28 rounded-full flex-shrink-0 flex items-center justify-center text-5xl font-bold text-white shadow-lg" style={{ background: "linear-gradient(135deg, #0057A8, #00A86B)" }}>
-              A
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-1">Ayo Adeusi</h3>
-              <p className="font-semibold mb-4" style={{ color: "#0057A8" }}>Founder &amp; CEO — The ViServe</p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Ayo Adeusi founded The ViServe with a clear mission: to make immigration accessible, transparent, and stress-free for everyone. With deep experience in immigration support and a passion for helping families and individuals achieve their goals, The ViServe was built to combine expert guidance with cutting-edge technology.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Ayo believes every immigrant deserves access to quality, affordable support — and that no one should have to face the immigration system alone. Through The ViServe, that vision is becoming a reality for thousands of clients across 150+ countries.
-              </p>
-            </div>
           </div>
         </div>
       </section>

@@ -244,35 +244,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Founder / Leadership */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Leadership</h2>
-            <p className="text-gray-600 text-lg">Built by people who understand the immigration journey firsthand.</p>
-          </div>
-          <div className="bg-gray-50 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
-            <div className="w-24 h-24 rounded-full flex-shrink-0 flex items-center justify-center text-4xl font-bold text-white shadow-lg" style={{ background: "linear-gradient(135deg, #0057A8, #00A86B)" }}>
-              A
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-1">Ayo Adeusi</h3>
-              <p className="text-blue-600 font-semibold mb-4">Founder & CEO, The ViServe</p>
-              <p className="text-gray-600 leading-relaxed">
-                Ayo founded The ViServe with a clear mission: to make immigration accessible, transparent, and stress-free for everyone.
-                With deep experience in immigration support and a passion for helping families and individuals achieve their American dream,
-                The ViServe was built to combine expert guidance with cutting-edge technology — giving every client clarity, confidence, and independence in their immigration journey.
-              </p>
-              <div className="mt-4">
-                <Link href="/about" className="inline-flex items-center gap-2 text-blue-700 font-semibold hover:underline text-sm">
-                  Learn More About Us <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 text-center">
