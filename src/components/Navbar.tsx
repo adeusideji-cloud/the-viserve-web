@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Globe, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -12,6 +13,9 @@ const navLinks = [
       { label: "Form Preparation", href: "/services#forms" },
       { label: "Document Checklists", href: "/services#documents" },
       { label: "RFE Support", href: "/services#rfe" },
+      { label: "Family Immigration", href: "/services#family" },
+      { label: "Business Immigration", href: "/services#business" },
+      { label: "Church & Nonprofit", href: "/services#nonprofit" },
       { label: "Attorney Referrals", href: "/services#referrals" },
     ],
   },
@@ -31,14 +35,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #0057A8, #00A86B)" }}>
-              <Globe className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <span className="text-xl font-bold" style={{ color: "#0057A8" }}>The ViServe</span>
-              <span className="text-xs block leading-none text-gray-500 -mt-0.5">Immigration Services</span>
-            </div>
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+            <Image src="/logo.svg" alt="The ViServe Logo" width={160} height={48} priority className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
@@ -55,7 +53,7 @@ export default function Navbar() {
                   </button>
                   {dropdown === link.label && (
                     <div
-                      className="absolute top-full left-0 mt-1 w-52 bg-white rounded-lg shadow-lg border border-gray-100 py-1"
+                      className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-1"
                       onMouseEnter={() => setDropdown(link.label)}
                       onMouseLeave={() => setDropdown(null)}
                     >
@@ -77,11 +75,11 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link href="/login" className="text-sm font-medium text-gray-700 hover:text-blue-700 transition-colors">
-              Sign In
+            <Link href="/portal/login" className="text-sm font-medium text-gray-700 hover:text-blue-700 transition-colors">
+              Client Portal
             </Link>
             <Link href="/get-started" className="px-4 py-2 text-sm font-semibold text-white rounded-lg transition-colors" style={{ background: "#0057A8" }}>
-              Get Started Free
+              Get Started
             </Link>
           </div>
 
@@ -101,11 +99,11 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-3 border-t border-gray-100 flex flex-col gap-2">
-            <Link href="/login" className="px-3 py-2 text-sm font-medium text-center border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50">
-              Sign In
+            <Link href="/portal/login" className="px-3 py-2 text-sm font-medium text-center border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50">
+              Client Portal
             </Link>
             <Link href="/get-started" className="px-3 py-2 text-sm font-semibold text-center text-white rounded-lg" style={{ background: "#0057A8" }}>
-              Get Started Free
+              Get Started
             </Link>
           </div>
         </div>

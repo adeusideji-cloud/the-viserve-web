@@ -1,15 +1,17 @@
 import Link from "next/link";
-import { CheckCircle, Star, Shield, Globe, Users, Award, ArrowRight, FileText, Calculator, BookOpen, Clock } from "lucide-react";
+import { CheckCircle, Star, Shield, Globe, Users, Award, ArrowRight, FileText, Calculator, BookOpen, Clock, Lock, Headphones, Zap } from "lucide-react";
 
-const packages = [
-  { title: "Green Card Application", description: "Prepare Form I-485 to apply for a green card from inside the United States.", icon: "🇺🇸", href: "/services#green-card", popular: true },
-  { title: "Family Petition (I-130)", description: "Help your relative get a green card with a properly prepared petition.", icon: "👨‍👩‍👧", href: "/services#family", popular: false },
-  { title: "Citizenship (N-400)", description: "Prepare your naturalization application to become a U.S. citizen.", icon: "⭐", href: "/services#citizenship", popular: false },
-  { title: "Work Visa Support", description: "H-1B, L-1, O-1 and other employment-based visa preparation assistance.", icon: "💼", href: "/services#work-visa", popular: false },
+const services = [
+  { title: "Green Card Application", description: "Prepare Form I-485 to apply for a green card from inside the United States.", icon: "🇺🇸", href: "/services#green-card" },
+  { title: "Family Petition (I-130)", description: "Help your relative get a green card with a properly prepared petition.", icon: "👨‍👩‍👧", href: "/services#family" },
+  { title: "Citizenship (N-400)", description: "Prepare your naturalization application to become a U.S. citizen.", icon: "⭐", href: "/services#citizenship" },
+  { title: "Work Visa Support", description: "H-1B, L-1, O-1 and other employment-based visa preparation assistance.", icon: "💼", href: "/services#work-visa" },
+  { title: "Business Immigration", description: "Support for entrepreneurs, investors, and corporate immigration needs.", icon: "🏢", href: "/services#business" },
+  { title: "Church & Nonprofit Support", description: "Specialized immigration resources for religious workers and nonprofits.", icon: "⛪", href: "/services#nonprofit" },
 ];
 
 const stats = [
-  { value: "50,000+", label: "Clients Served" },
+  { value: "10,000+", label: "Clients Served" },
   { value: "98%", label: "Approval Rate" },
   { value: "150+", label: "Countries Served" },
   { value: "4.9/5", label: "Average Rating" },
@@ -20,15 +22,22 @@ const features = [
   { icon: FileText, title: "Accurate USCIS Forms", desc: "We prepare only the latest editions of official USCIS forms, ready to sign and file." },
   { icon: Globe, title: "Global Support", desc: "Our team supports clients in 150+ countries in multiple languages." },
   { icon: Clock, title: "Deadline Reminders", desc: "Never miss a critical immigration deadline with our smart reminder system." },
-  { icon: Users, title: "Live Expert Support", desc: "Real humans ready to answer your questions via chat, email, or phone." },
-  { icon: Award, title: "Satisfaction Guarantee", desc: "If USCIS denies your application, we refund our service fee — guaranteed." },
+  { icon: Headphones, title: "Live Expert Support", desc: "Real humans ready to answer your questions via chat, email, or phone." },
+  { icon: Award, title: "Satisfaction Guarantee", desc: "We work with you until your case is complete — your success is our mission." },
+];
+
+const steps = [
+  { step: "1", title: "Check Eligibility", desc: "Use our free tool to discover your best immigration options in minutes." },
+  { step: "2", title: "Choose Your Service", desc: "Select the service that fits your needs. No hidden fees, no surprises." },
+  { step: "3", title: "Complete Your Forms", desc: "Answer simple questions; we prepare your USCIS forms accurately." },
+  { step: "4", title: "File with Confidence", desc: "Receive custom filing instructions and submit your application." },
 ];
 
 const testimonials = [
-  { name: "Maria G.", country: "🇲🇽 Mexico", text: "ViServe made my green card application so simple. The step-by-step guidance was exactly what I needed. Approved in 8 months!", rating: 5 },
+  { name: "Maria G.", country: "🇲🇽 Mexico", text: "The ViServe made my green card application so simple. The step-by-step guidance was exactly what I needed. Approved in 8 months!", rating: 5 },
   { name: "Emmanuel O.", country: "🇳🇬 Nigeria", text: "I was nervous about the process but the document checklist and support team kept me on track. Highly recommend!", rating: 5 },
   { name: "Priya S.", country: "🇮🇳 India", text: "The fee calculator and deadline tracker saved me from missing important dates. This platform is a game changer.", rating: 5 },
-  { name: "Carlos M.", country: "🇧🇷 Brazil", text: "Professional, affordable, and incredibly easy to use. My entire family used ViServe for our citizenship applications.", rating: 5 },
+  { name: "Carlos M.", country: "🇧🇷 Brazil", text: "Professional, affordable, and incredibly easy to use. My entire family used The ViServe for our citizenship applications.", rating: 5 },
 ];
 
 const tools = [
@@ -36,6 +45,13 @@ const tools = [
   { icon: Globe, label: "Visa Finder", href: "/tools#visa-finder", desc: "Discover the best visa category for your situation" },
   { icon: Calculator, label: "Fee Calculator", href: "/tools#fees", desc: "Get accurate USCIS filing fee estimates" },
   { icon: BookOpen, label: "Immigration Glossary", href: "/tools#glossary", desc: "Plain-English explanations of immigration terms" },
+];
+
+const trustBadges = [
+  { icon: Lock, text: "SSL Secured" },
+  { icon: Shield, text: "Attorney-Reviewed" },
+  { icon: Zap, text: "USCIS Compliant" },
+  { icon: Users, text: "10,000+ Clients" },
 ];
 
 export default function HomePage() {
@@ -48,27 +64,44 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm mb-6">
               <Star className="w-4 h-4 text-yellow-300 fill-yellow-300" />
-              <span>Trusted by 50,000+ immigrants worldwide</span>
+              <span>Trusted by 10,000+ immigrants worldwide</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Immigration Made <span className="text-yellow-300">Simple</span> &amp; Affordable
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Navigate Your Immigration Journey With <span className="text-yellow-300">Clarity, Confidence,</span> and Independence.
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl">
-              The ViServe guides you through every step of the immigration process — from visa applications to citizenship — with expert support and attorney-reviewed tools.
+              The ViServe guides individuals, families, and businesses through every step of the immigration process — from visa applications to citizenship — with expert support and attorney-reviewed tools.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
               <Link href="/get-started" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl text-blue-900 bg-yellow-400 hover:bg-yellow-300 transition-colors shadow-lg">
-                Start Your Application <ArrowRight className="w-5 h-5" />
+                Get Started <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link href="/tools" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl text-white border-2 border-white/40 hover:border-white hover:bg-white/10 transition-colors">
-                Free Eligibility Check
+              <Link href="/tools#eligibility" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl text-white border-2 border-white/40 hover:border-white hover:bg-white/10 transition-colors">
+                Check Eligibility Free
+              </Link>
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-xl text-white border-2 border-white/40 hover:border-white hover:bg-white/10 transition-colors">
+                Book a Consultation
               </Link>
             </div>
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-blue-100">
-              {["✓ No hidden fees", "✓ Money-back guarantee", "✓ Attorney-reviewed", "✓ 150+ countries served"].map(t => (
+              {["✓ No hidden fees", "✓ Attorney-reviewed", "✓ 150+ countries served", "✓ Secure & confidential"].map(t => (
                 <span key={t}>{t}</span>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Badges */}
+      <section className="bg-white border-b border-gray-100 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-8">
+            {trustBadges.map(({ icon: Icon, text }) => (
+              <div key={text} className="flex items-center gap-2 text-sm text-gray-500">
+                <Icon className="w-4 h-4 text-green-600" />
+                <span className="font-medium">{text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -87,23 +120,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Packages */}
+      {/* Services */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Popular Services</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Choose your immigration path — we handle the paperwork with precision.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Our Immigration Services</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Comprehensive immigration support for individuals, families, businesses, and organizations worldwide.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {packages.map((pkg) => (
-              <div key={pkg.title} className={`relative bg-white rounded-2xl p-6 shadow-sm border card-hover ${pkg.popular ? "border-blue-500 ring-2 ring-blue-500/20" : "border-gray-100"}`}>
-                {pkg.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Most Popular</span>
-                )}
-                <div className="text-4xl mb-4">{pkg.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{pkg.title}</h3>
-                <p className="text-sm text-gray-500 mb-5 leading-relaxed">{pkg.description}</p>
-                <Link href={pkg.href} className="inline-flex items-center gap-1 text-sm font-semibold hover:gap-2 transition-all" style={{ color: "#0057A8" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((svc) => (
+              <div key={svc.title} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 card-hover">
+                <div className="text-4xl mb-4">{svc.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{svc.title}</h3>
+                <p className="text-sm text-gray-500 mb-5 leading-relaxed">{svc.description}</p>
+                <Link href={svc.href} className="inline-flex items-center gap-1 text-sm font-semibold hover:gap-2 transition-all" style={{ color: "#0057A8" }}>
                   Learn More <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -122,7 +152,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Free Immigration Tools</h2>
-            <p className="text-gray-600 text-lg max-w-xl mx-auto">Use our tools to prepare, plan, and navigate your immigration journey.</p>
+            <p className="text-gray-600 text-lg max-w-xl mx-auto">Use our tools to prepare, plan, and navigate your immigration journey with confidence.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {tools.map(({ icon: Icon, label, href, desc }) => (
@@ -135,6 +165,11 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+          <div className="text-center mt-8">
+            <Link href="/tools" className="inline-flex items-center gap-2 text-blue-700 font-semibold hover:underline">
+              Explore All Tools <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -142,16 +177,11 @@ export default function HomePage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1a1a2e" }}>How ViServe Works</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1a1a2e" }}>How The ViServe Works</h2>
             <p className="text-gray-600 text-lg">Simple steps. Clear guidance. Accurate results.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: "1", title: "Check Eligibility", desc: "Use our free tool to discover your best immigration options in minutes." },
-              { step: "2", title: "Choose a Package", desc: "Select the service that fits your needs and budget. No hidden fees." },
-              { step: "3", title: "Complete Your Forms", desc: "Answer simple questions; we prepare your USCIS forms accurately." },
-              { step: "4", title: "File with Confidence", desc: "Receive custom filing instructions and submit your application." },
-            ].map(({ step, title, desc }) => (
+            {steps.map(({ step, title, desc }) => (
               <div key={step} className="text-center">
                 <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-xl font-bold shadow-lg" style={{ background: "linear-gradient(135deg, #0057A8, #00A86B)" }}>
                   {step}
@@ -168,7 +198,7 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Why Choose ViServe?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Why Choose The ViServe?</h2>
             <p className="text-gray-600 text-lg max-w-xl mx-auto">Everything you need to navigate immigration successfully, all in one place.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -214,6 +244,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Founder / Leadership */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Leadership</h2>
+            <p className="text-gray-600 text-lg">Built by people who understand the immigration journey firsthand.</p>
+          </div>
+          <div className="bg-gray-50 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+            <div className="w-24 h-24 rounded-full flex-shrink-0 flex items-center justify-center text-4xl font-bold text-white shadow-lg" style={{ background: "linear-gradient(135deg, #0057A8, #00A86B)" }}>
+              A
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">Ayo Adeusi</h3>
+              <p className="text-blue-600 font-semibold mb-4">Founder & CEO, The ViServe</p>
+              <p className="text-gray-600 leading-relaxed">
+                Ayo founded The ViServe with a clear mission: to make immigration accessible, transparent, and stress-free for everyone.
+                With deep experience in immigration support and a passion for helping families and individuals achieve their American dream,
+                The ViServe was built to combine expert guidance with cutting-edge technology — giving every client clarity, confidence, and independence in their immigration journey.
+              </p>
+              <div className="mt-4">
+                <Link href="/about" className="inline-flex items-center gap-2 text-blue-700 font-semibold hover:underline text-sm">
+                  Learn More About Us <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 text-center">
@@ -221,10 +280,10 @@ export default function HomePage() {
           <p className="text-gray-600 text-lg mb-8">Join thousands of families who trusted The ViServe to navigate their immigration process successfully.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/get-started" className="px-8 py-4 font-semibold text-white rounded-xl transition-colors shadow-lg text-base" style={{ background: "#0057A8" }}>
-              Get Started — It&apos;s Free
+              Get Started Today
             </Link>
             <Link href="/contact" className="px-8 py-4 font-semibold text-blue-700 rounded-xl border-2 border-blue-700 hover:bg-blue-50 transition-colors text-base">
-              Talk to an Expert
+              Book a Consultation
             </Link>
           </div>
         </div>

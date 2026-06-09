@@ -43,20 +43,28 @@ const services = [
     features: ["F-1 student visa prep", "J-1 exchange visitor support", "SEVIS guidance", "OPT/CPT authorization", "Status change assistance"],
   },
   {
+    id: "business",
+    emoji: "🏢",
+    title: "Business Immigration",
+    subtitle: "Entrepreneurs & Investors",
+    description: "Comprehensive immigration support for business owners, investors, and corporations navigating employment-based and investor visa categories.",
+    features: ["EB-5 investor visa support", "E-2 treaty investor preparation", "Intracompany transfer (L-1)", "Corporate immigration planning", "Multi-employee petition support"],
+  },
+  {
+    id: "nonprofit",
+    emoji: "⛪",
+    title: "Church & Nonprofit Immigration",
+    subtitle: "Religious & Nonprofit Organizations",
+    description: "Specialized immigration resources and support for religious workers, missionaries, and nonprofit organizations sponsoring foreign nationals.",
+    features: ["R-1 religious worker visa", "Special immigrant religious worker (I-360)", "Nonprofit sponsorship guidance", "Missionary & pastor visa support", "Faith-based organization resources"],
+  },
+  {
     id: "rfe",
     emoji: "📋",
     title: "RFE Response Support",
     subtitle: "Request for Evidence",
-    description: "Received an RFE? Don't panic. Our experts help you organize a strong, complete response to keep your application moving forward.",
-    features: ["RFE analysis & strategy", "Document organization", "Evidence compilation guide", "Response letter templates", "Attorney referral if needed"],
-  },
-  {
-    id: "referrals",
-    emoji: "⚖️",
-    title: "Attorney Referrals",
-    subtitle: "When You Need Legal Counsel",
-    description: "For complex cases, we connect you with licensed immigration attorneys in our vetted network who provide legal advice at competitive rates.",
-    features: ["Free case assessment", "Vetted attorney network", "Competitive fee structures", "Ongoing case support", "Multiple languages available"],
+    description: "Received an RFE or NOID? Don't panic. Our experts help you organize a strong, complete response to keep your application moving forward.",
+    features: ["RFE/NOID analysis & strategy", "Document organization", "Evidence compilation guide", "Response letter templates", "Attorney referral if needed"],
   },
   {
     id: "document",
@@ -65,6 +73,14 @@ const services = [
     subtitle: "Complete Document Packages",
     description: "From cover letters to affidavits, we generate all supporting documents your immigration case requires, customized to your specific answers.",
     features: ["Custom cover letters", "Affidavit of support (I-864)", "Personal statements", "Document translation guidance", "Organizational checklists"],
+  },
+  {
+    id: "referrals",
+    emoji: "⚖️",
+    title: "Attorney Referrals",
+    subtitle: "When You Need Legal Counsel",
+    description: "For complex cases, we connect you with licensed immigration attorneys in our vetted network who provide legal advice at competitive rates.",
+    features: ["Free case assessment", "Vetted attorney network", "Competitive fee structures", "Ongoing case support", "Multiple languages available"],
   },
 ];
 
@@ -75,11 +91,16 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Immigration Services</h1>
           <p className="text-lg text-blue-100 max-w-2xl mx-auto">
-            Comprehensive, attorney-reviewed immigration support for individuals, families, and professionals worldwide.
+            Comprehensive, attorney-reviewed immigration support for individuals, families, businesses, churches, and professionals worldwide.
           </p>
-          <Link href="/get-started" className="inline-flex items-center gap-2 mt-8 px-8 py-4 font-semibold rounded-xl text-blue-900 bg-yellow-400 hover:bg-yellow-300 transition-colors">
-            Check My Eligibility Free <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <Link href="/get-started" className="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-xl text-blue-900 bg-yellow-400 hover:bg-yellow-300 transition-colors">
+              Get Started <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link href="/tools#eligibility" className="inline-flex items-center gap-2 px-8 py-4 font-semibold rounded-xl text-white border-2 border-white/40 hover:border-white hover:bg-white/10 transition-colors">
+              Check Eligibility Free
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -104,7 +125,7 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
-                    <Link href={`/contact`} className="inline-flex items-center gap-1 text-sm font-semibold" style={{ color: "#0057A8" }}>
+                    <Link href="/contact" className="inline-flex items-center gap-1 text-sm font-semibold" style={{ color: "#0057A8" }}>
                       Get Started <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -115,6 +136,21 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* CTA */}
+      <section className="py-16 bg-blue-700 text-white">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">Not Sure Where to Start?</h2>
+          <p className="text-blue-100 text-lg mb-8">Use our free eligibility checker to find the right path for your situation — it only takes 2 minutes.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/tools#eligibility" className="px-8 py-4 font-semibold bg-yellow-400 text-blue-900 hover:bg-yellow-300 rounded-xl transition-colors">
+              Check My Eligibility
+            </Link>
+            <Link href="/contact" className="px-8 py-4 font-semibold border-2 border-white/50 hover:border-white hover:bg-white/10 rounded-xl transition-colors">
+              Book a Consultation
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

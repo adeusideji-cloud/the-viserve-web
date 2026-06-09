@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Globe, Mail, Phone, MapPin, Share2, MessageCircle, Rss, Video } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin, Share2, MessageCircle, Rss, Video } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,10 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #0057A8, #00A86B)" }}>
-                <Globe className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">The ViServe</span>
+              <Image src="/logo.svg" alt="The ViServe" width={160} height={48} className="h-10 w-auto brightness-0 invert" />
             </Link>
             <p className="text-sm text-gray-400 mb-5 max-w-xs leading-relaxed">
               Empowering immigrants worldwide with affordable, accurate, and accessible immigration support services.
@@ -61,7 +59,7 @@ export default function Footer() {
             </ul>
             <h3 className="text-white font-semibold mt-6 mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
-              {[["Terms of Use","/legal/terms"],["Privacy Policy","/legal/privacy"],["Disclaimer","/legal/disclaimer"],["Refund Policy","/legal/refund"]].map(([label, href]) => (
+              {[["Terms of Use","/legal/terms"],["Privacy Policy","/legal/privacy"],["Cookie Policy","/legal/privacy#cookies"],["Disclaimer","/legal/disclaimer"],["Refund Policy","/legal/refund"]].map(([label, href]) => (
                 <li key={href}><Link href={href} className="hover:text-white transition-colors">{label}</Link></li>
               ))}
             </ul>
