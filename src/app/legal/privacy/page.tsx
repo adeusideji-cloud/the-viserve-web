@@ -28,7 +28,7 @@ export default function PrivacyPage() {
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">5. Your Rights (GDPR/CCPA)</h2>
-          <p>Depending on your location, you may have the right to access, correct, delete, or port your personal data. Contact us at <a href="mailto:privacy@theviserve.com" className="text-blue-600 underline">privacy@theviserve.com</a> to exercise these rights.</p>
+          <p>Depending on your location, you may have the right to access, correct, delete, or port your personal data. Contact us at <a href="mailto:privacy@theviservegroup.com" className="text-blue-600 underline">privacy@theviservegroup.com</a> to exercise these rights.</p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">6. Cookies</h2>
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">7. Contact</h2>
-          <p>For privacy concerns: <a href="mailto:privacy@theviserve.com" className="text-blue-600 underline">privacy@theviserve.com</a></p>
+          <p>For privacy concerns: <a href="mailto:privacy@theviservegroup.com" className="text-blue-600 underline">privacy@theviservegroup.com</a></p>
         </section>
       </div>
     </div>

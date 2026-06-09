@@ -25,9 +25,9 @@ export default function Footer() {
               ))}
             </div>
             <div className="mt-5 space-y-2 text-sm text-gray-400">
-              <a href="mailto:info@theviserve.com" className="flex items-center gap-2 hover:text-white"><Mail className="w-4 h-4" /> info@theviserve.com</a>
-              <a href="tel:+1-800-VISERVE" className="flex items-center gap-2 hover:text-white"><Phone className="w-4 h-4" /> +1-800-VISERVE</a>
-              <span className="flex items-center gap-2"><MapPin className="w-4 h-4" /> United States (Global Service)</span>
+              <a href="mailto:info@theviservegroup.com" className="flex items-center gap-2 hover:text-white"><Mail className="w-4 h-4" /> info@theviservegroup.com</a>
+              <a href="tel:+1 (737) 344-5599" className="flex items-center gap-2 hover:text-white"><Phone className="w-4 h-4" /> +1 (737) 344-5599</a>
+              <span className="flex items-center gap-2"><MapPin className="w-4 h-4" /> 101 E. Park Blvd, Suite 600, Plano, TX 75074</span>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
           <p>© {new Date().getFullYear()} The ViServe All rights reserved.</p>
           <p className="text-center text-xs">
-            ⚠️ The The The ViServe is not a law firm. We provide self-help document preparation services only. We are not attorneys and do not provide legal advice.
+            ⚠️ The ViServe is not a law firm. We provide self-help document preparation services only. We are not attorneys and do not provide legal advice.
           </p>
         </div>
       </div>

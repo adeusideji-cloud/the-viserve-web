@@ -28,7 +28,7 @@ export default function RefundPage() {
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">How to Request a Refund</h2>
-          <p>Email <a href="mailto:refunds@theviserve.com" className="text-blue-600 underline">refunds@theviserve.com</a> with your case number, denial notice, and a description of the error. We will review and respond within 5 business days.</p>
+          <p>Email <a href="mailto:refunds@theviservegroup.com" className="text-blue-600 underline">refunds@theviservegroup.com</a> with your case number, denial notice, and a description of the error. We will review and respond within 5 business days.</p>
         </section>
       </div>
     </div>

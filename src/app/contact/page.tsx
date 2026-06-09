@@ -31,10 +31,10 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold mb-6" style={{ color: "#1a1a2e" }}>Get in Touch</h2>
                 <div className="space-y-5">
                   {[
-                    { icon: Mail, label: "Email", value: "info@theviserve.com", href: "mailto:info@theviserve.com" },
-                    { icon: Phone, label: "Phone", value: "+1-800-VISERVE", href: "tel:+18008473783" },
-                    { icon: MessageCircle, label: "WhatsApp", value: "Chat with us", href: "https://wa.me/18008473783" },
-                    { icon: MapPin, label: "Address", value: "United States (Global Service)", href: null },
+                    { icon: Mail, label: "Email", value: "info@theviservegroup.com", href: "mailto:info@theviservegroup.com" },
+                    { icon: Phone, label: "Phone", value: "+1 (737) 344-5599", href: "tel:+17373445599" },
+                    { icon: MessageCircle, label: "WhatsApp", value: "Chat with us", href: "https://wa.me/17373445599" },
+                    { icon: MapPin, label: "Address", value: "101 E. Park Blvd, Suite 600, Plano, TX 75074", href: null },
                   ].map(({ icon: Icon, label, value, href }) => (
                     <div key={label} className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "#EEF4FF" }}>
@@ -66,7 +66,7 @@ export default function ContactPage() {
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
                 <h3 className="font-semibold text-gray-900 mb-2">Need urgent help?</h3>
                 <p className="text-sm text-gray-500 mb-3">For time-sensitive immigration matters, use our priority support line.</p>
-                <a href="tel:+18008473783" className="inline-flex items-center gap-2 text-sm font-semibold" style={{ color: "#0057A8" }}>
+                <a href="tel:+17373445599" className="inline-flex items-center gap-2 text-sm font-semibold" style={{ color: "#0057A8" }}>
                   <Phone className="w-4 h-4" /> Call Priority Support
                 </a>
               </div>
