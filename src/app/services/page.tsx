@@ -9,7 +9,7 @@ const services = [
     subtitle: "Form I-485 & I-130",
     description: "Whether you're applying from inside the U.S. or helping a relative from abroad, our guided process ensures your green card application is accurate and complete.",
     features: ["Form I-485 (Adjustment of Status)", "Form I-130 (Petition for Alien Relative)", "Document checklist generation", "Biometrics appointment guidance", "Interview preparation tips"],
-    price: "From $149",
+    price: "Free",
   },
   {
     id: "citizenship",
@@ -18,7 +18,7 @@ const services = [
     subtitle: "Naturalization Application",
     description: "Become a U.S. citizen with confidence. Our step-by-step naturalization service ensures your Form N-400 is properly prepared and filed.",
     features: ["Form N-400 preparation", "Eligibility verification", "Civics test study guide", "Interview prep materials", "Filing instructions"],
-    price: "From $99",
+    price: "Free",
   },
   {
     id: "family",
@@ -27,7 +27,7 @@ const services = [
     subtitle: "Bring Your Family to the U.S.",
     description: "Reunite with your loved ones. We help with petitions for spouses, children, parents, and siblings to obtain permanent resident status.",
     features: ["Spousal visas (IR-1, CR-1)", "K-1 Fiancé visa (I-129F)", "Parent & sibling petitions", "Child immigration support", "Conditional green card removal"],
-    price: "From $129",
+    price: "Free",
   },
   {
     id: "work-visa",
@@ -36,7 +36,7 @@ const services = [
     subtitle: "H-1B, L-1, O-1 & More",
     description: "Support for professionals, executives, and extraordinary ability individuals seeking to live and work in the United States.",
     features: ["H-1B specialty occupation", "L-1 intracompany transfer", "O-1 extraordinary ability", "EB-1, EB-2, EB-3 categories", "Labor certification (PERM)"],
-    price: "From $199",
+    price: "Free",
   },
   {
     id: "student",
@@ -45,7 +45,7 @@ const services = [
     subtitle: "F-1, J-1, M-1 Support",
     description: "Pursue your education in the U.S. with proper visa documentation. We help students and exchange visitors prepare accurate visa applications.",
     features: ["F-1 student visa prep", "J-1 exchange visitor support", "SEVIS guidance", "OPT/CPT authorization", "Status change assistance"],
-    price: "From $79",
+    price: "Free",
   },
   {
     id: "rfe",
@@ -54,7 +54,7 @@ const services = [
     subtitle: "Request for Evidence",
     description: "Received an RFE? Don't panic. Our experts help you organize a strong, complete response to keep your application moving forward.",
     features: ["RFE analysis & strategy", "Document organization", "Evidence compilation guide", "Response letter templates", "Attorney referral if needed"],
-    price: "From $249",
+    price: "Free",
   },
   {
     id: "referrals",
@@ -72,7 +72,7 @@ const services = [
     subtitle: "Complete Document Packages",
     description: "From cover letters to affidavits, we generate all supporting documents your immigration case requires, customized to your specific answers.",
     features: ["Custom cover letters", "Affidavit of support (I-864)", "Personal statements", "Document translation guidance", "Organizational checklists"],
-    price: "From $49",
+    price: "Free",
   },
 ];
 
@@ -116,7 +116,7 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                     <Link href={`/pricing`} className="inline-flex items-center gap-1 text-sm font-semibold" style={{ color: "#0057A8" }}>
-                      See Pricing <ArrowRight className="w-4 h-4" />
+                      Learn More <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
