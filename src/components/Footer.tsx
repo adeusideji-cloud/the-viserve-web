@@ -68,11 +68,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} The ViServe All rights reserved.</p>
-          <p className="text-center text-xs">
-            ⚠️ The ViServe is not a law firm. We provide self-help document preparation services only. We are not attorneys and do not provide legal advice.
-          </p>
+        <div className="border-t border-gray-800 pt-8 flex items-center justify-center text-sm text-gray-500">
+          <p>© {new Date().getFullYear()} The ViServe. All rights reserved.</p>
         </div>
       </div>
     </footer>

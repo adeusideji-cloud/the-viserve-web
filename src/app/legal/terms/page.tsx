@@ -34,7 +34,7 @@ export default function TermsPage() {
         </section>
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">8. Contact</h2>
-          <p>For questions about these Terms, contact us at <a href="mailto:legal@theviservegroup.com" className="text-blue-600 underline">legal@theviservegroup.com</a>.</p>
+          <p>For questions about these Terms, contact us at info@theviservegroup.com.</p>
         </section>
       </div>
     </div>
