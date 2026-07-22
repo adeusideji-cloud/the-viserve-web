@@ -1,0 +1,160 @@
+import { Shield, Heart, Users, Target, ArrowRight, CheckCircle, Eye, Lightbulb, Zap, Scale, Globe } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+
+const values = [
+  { icon: Eye, title: "Clarity", desc: "We deliver accurate, transparent, and up-to-date immigration information that cuts through misinformation and confusion." },
+  { icon: Shield, title: "Integrity", desc: "We uphold the highest standards of honesty and trust, ensuring every immigrant has access to reliable guidance." },
+  { icon: Lightbulb, title: "Innovation", desc: "We harness technology to simplify complex processes, making immigration more accessible and stress-free." },
+  { icon: Zap, title: "Empowerment", desc: "We give immigrants the tools and confidence to navigate their journeys independently." },
+  { icon: Scale, title: "Equity", desc: "We believe immigration opportunities should be fair, inclusive, and available to people of all backgrounds." },
+  { icon: Heart, title: "Compassion", desc: "We approach every solution with empathy, recognizing the challenges and hopes behind every immigration story." },
+  { icon: Users, title: "Collaboration", desc: "We work across borders, cultures, and communities to build solutions that serve global needs." },
+];
+
+const commitments = [
+  "We follow USCIS guidelines to ensure every form is accurate and up-to-date.",
+  "We protect your sensitive personal information with bank-grade security.",
+  "We are committed to transparency — you will never be surprised by hidden fees.",
+  "We only refer clients to vetted, licensed immigration attorneys when legal advice is needed.",
+  "We are committed to compliance, ethical service, and respect for every client.",
+];
+
+export default function AboutPage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="hero-gradient text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About The ViServe</h1>
+          <p className="text-lg text-blue-100 max-w-2xl mx-auto">
+            A trusted immigration technology and support platform helping immigrants understand, prepare, organize, and manage immigration processes with clarity and confidence.
+          </p>
+        </div>
+      </section>
+
+      {/* Story */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6" style={{ color: "#1a1a2e" }}>Our Story</h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                The ViServe was founded with one clear purpose: to eliminate the confusion, fear, and financial burden that too many immigrants face when navigating the immigration system.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                We serve clients in over 150 countries, helping families reunite, professionals advance their careers, and students pursue their dreams in the United States and beyond.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                The ViServe is committed to combining expert human guidance with cutting-edge technology — making immigration accessible to everyone, everywhere.
+              </p>
+              <Link href="/services" className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white rounded-xl" style={{ background: "#0057A8" }}>
+                Explore Our Services <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { value: "10,000+", label: "Clients Served" },
+                { value: "150+", label: "Countries" },
+                { value: "98%", label: "Approval Rate" },
+                { value: "4.9/5", label: "Client Rating" },
+              ].map(({ value, label }) => (
+                <div key={label} className="bg-blue-50 rounded-2xl p-6 text-center">
+                  <div className="text-3xl font-bold mb-1" style={{ color: "#0057A8" }}>{value}</div>
+                  <div className="text-sm text-gray-500">{label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: "#EEF4FF" }}>
+                <Target className="w-6 h-6" style={{ color: "#0057A8" }} />
+              </div>
+              <h3 className="text-2xl font-bold mb-3" style={{ color: "#1a1a2e" }}>Our Mission</h3>
+              <p className="text-gray-600 leading-relaxed">
+                At The ViServe, our mission is to simplify and democratize global immigration processes by providing innovative technology solutions that guide individuals, families, and organizations through every immigration pathway. We are committed to delivering accessible, reliable, and user-friendly tools that reduce barriers, promote compliance, and enable immigrants worldwide to achieve their personal and professional goals without unnecessary complexity or dependency.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: "#EDFBF4" }}>
+                <Globe className="w-6 h-6" style={{ color: "#00A86B" }} />
+              </div>
+              <h3 className="text-2xl font-bold mb-3" style={{ color: "#1a1a2e" }}>Our Vision</h3>
+              <p className="text-gray-600 leading-relaxed">
+                To become the world&apos;s most trusted digital platform that empowers immigrants to navigate and succeed in every stage of the immigration journey with clarity, confidence, and independence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Our Core Values</h2>
+            <p className="text-gray-600">The principles that guide everything we do.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="flex gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: "#EEF4FF" }}>
+                  <Icon className="w-6 h-6" style={{ color: "#0057A8" }} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">{title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Commitment */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Our Commitment to You</h2>
+            <p className="text-gray-600">Compliance, transparency, and respect in everything we do.</p>
+          </div>
+          <div className="space-y-4">
+            {commitments.map((c, i) => (
+              <div key={i} className="flex items-start gap-3 bg-gray-50 rounded-xl p-4">
+                <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: "#00A86B" }} />
+                <p className="text-gray-700 text-sm leading-relaxed">{c}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 p-6 bg-blue-50 rounded-2xl border border-blue-100 text-center">
+            <p className="text-sm text-blue-800 leading-relaxed">
+              <strong>Important Notice:</strong> The ViServe is not a law firm and does not provide legal advice unless services are provided through a licensed attorney or authorized representative. Information on this website is for educational and document-preparation support purposes only. Use of this website does not create an attorney-client relationship.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-2xl font-bold mb-4" style={{ color: "#1a1a2e" }}>Ready to Work With Us?</h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/get-started" className="px-8 py-4 font-semibold text-white rounded-xl text-base" style={{ background: "#0057A8" }}>
+              Get Started Today
+            </Link>
+            <Link href="/contact" className="px-8 py-4 font-semibold text-blue-700 rounded-xl border-2 border-blue-700 hover:bg-blue-50 transition-colors text-base">
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
